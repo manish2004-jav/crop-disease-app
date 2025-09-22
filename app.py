@@ -14,7 +14,13 @@ st.set_page_config(page_title="KrishiRakshak 🌱", page_icon="🌱", layout="wi
 st.sidebar.title("🌱 KrishiRakshak")
 st.sidebar.markdown("AI-Driven Crop Disease Detection & Management")
 st.sidebar.markdown("---")
-language = st.sidebar.radio("Language", ["English", "Hindi", "Kannada", "Telugu"])
+language = st.sidebar.radio(
+    "Language",
+    ["English", "Hindi", "Kannada", "Telugu"],
+    index=0,
+    label_visibility="visible"
+)
+st.write("Selected language:", language)
 
 # ----------------------------
 # Main App
@@ -84,3 +90,4 @@ else:
 # ----------------------------
 st.markdown("---")
 st.caption("🌱 Prototype developed for SIH 2025 | Team KrishiRakshak")
+
